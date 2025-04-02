@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        import { Carte } from "./Carte.js"
+
+        let carte1 = new Carte ('Plumb', 'George Bacovia', 'Versuri', '1916', '14,90 lei');
+        let carte2 = new Carte ('O Scrisoare pierduta', 'Ion Luca Caragiale', 'Convorbiri literare', '1884', '16 lei');
+        let carte3 = new Carte ('Moara cu noroc', 'Ioan Slavici', 'Novele din popor', '1881', '7,50 lei');
+        carte1.afiseazaInfo();
+        carte2.afiseazaInfo();
+        carte3.afiseazaInfo();
+    </script>
+</body>
+</html>
