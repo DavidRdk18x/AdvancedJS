@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                const person = {
+            age: 30,
+            job: "Unemployed",
+            country: "Nigeria",
+            car: "Audi",
+            description: function () {
+                return `${this.name} - ${this.age} - ${this.job} - ${this.country} - ${this.car}`;
+            },
+        };
+        console.log(person.description());
+        delete person.car;
+        console.log(person.description());
+        delete person
+        console.log(person.description());
+    </script>
+</body>
+</html>

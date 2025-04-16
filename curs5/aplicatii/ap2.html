@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      class ChatRoom {
+        constructor (nume) {
+            this.nume = nume;
+        }
+          //Middleware Pattern
+          logMessage(user, message) {
+              const sender = user.getName();
+              console.log(`${new Date().toLocaleString()} [${this.nume}] [${sender}]: ${message}`);
+          }
+      }
+
+      class User {
+          constructor(name, chatroom) {
+              this.name = name;
+              this.chatroom = chatroom;
+          }
+
+          getName() {
+              return this.name;
+          }
+
+          send(message) {
+              this.chatroom.logMessage(this, message);
+          }
+      }
+
+      const chatroom = new ChatRoom('JavaScript');
+
+      const user1 = new User("DavidRdk", chatroom);
+      const user2 = new User("Marius Moldo", chatroom);
+      const user3 = new User("Angel Jolie", chatroom);
+      const user4 = new User("Oskury", chatroom);
+      const user5 = new User("Ale", chatroom);
+
+      user1.send("Mi au bataie");
+      user2.send("Vino la scuttle!");
+      user3.send("Imi place Swain!");
+      user4.send("Schimbam midlane ul!");
+      user5.send("Ma duc Nami sau Soraka?");
+    </script>
+  </body>
+</html>
